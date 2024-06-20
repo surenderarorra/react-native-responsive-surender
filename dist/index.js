@@ -9,17 +9,18 @@ var size = function (input) {
     if (typeof input === "number") {
         return input * responsiveWidth;
     }
-    var sm = input.sm, md = input.md, lg = input.lg, xl = input.xl, xxl = input.xxl;
-    if (exports.screenWidth <= 399 && sm)
+    var xm = input.xm, sm = input.sm, md = input.md, lg = input.lg, xl = input.xl, xxl = input.xxl;
+    if (exports.screenWidth <= 399 && xm)
+        return xm * responsiveWidth;
+    if (exports.screenWidth >= 400 && exports.screenWidth <= 599 && sm)
         return sm * responsiveWidth;
-    if (exports.screenWidth >= 400 && exports.screenWidth <= 599 && md)
+    if (exports.screenWidth >= 600 && exports.screenWidth <= 767 && md)
         return md * responsiveWidth;
-    if (exports.screenWidth >= 600 && exports.screenWidth <= 767 && lg)
+    if (exports.screenWidth >= 768 && exports.screenWidth <= 1007 && lg)
         return lg * responsiveWidth;
-    if (exports.screenWidth >= 768 && exports.screenWidth <= 1007 && xl)
+    if (exports.screenWidth >= 1008 && exports.screenWidth <= 1279 && xl)
         return xl * responsiveWidth;
-    if (exports.screenWidth >= 1008 && exports.screenWidth <= 1279 && xxl)
+    if (exports.screenWidth >= 1280 && exports.screenWidth <= 1535 && xxl)
         return xxl * responsiveWidth;
-    return 0;
 };
 exports.size = size;

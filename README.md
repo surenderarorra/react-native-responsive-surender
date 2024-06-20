@@ -1,7 +1,9 @@
 # react-native-responsive-surender
+
 An npm package for responsive your react native app
 
 # Install this Package
+
 ```js
 npm i react-native-responsive-surender
 ```
@@ -35,19 +37,28 @@ const App = ()= > {
 ```
 
 # Get the Multiple Sizes if any not getting fit
+
 Using different size properties will not effect the device that are below 600 screen width, choose any one that is fit according to you.
 
 ```js
-import {size, size_sm, size_md, size_lg, size_xl} from 'react-native-responsive-surender';
+import {size} from 'react-native-responsive-surender';
 
 const App = ()= > {
   return (
-    <View style={{fontSize: size_xl(16)}}>
+    <View style={size({xm:30 sm:30, md:30, lg:30, xl:30, xxl:30})}>
       <Text>Hello World!</Text>
     </View>
   );
 };
 ```
 
+```js
 
+1. xm is for screen that is smaller than 399.
+2. sm is for screen that is between 400 to 599.
+3. md is for screen that is between 600 to 767.
+4. lg is for screen that is between 768 to 1007.
+5. xl is for screen that is between 1008 to 1279
+6. xxl is for screen that is greater than 1280.
 
+```
