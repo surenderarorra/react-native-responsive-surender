@@ -9,9 +9,9 @@ var size = function (input) {
     if (typeof input === "number") {
         return input * responsiveWidth;
     }
-    var xm = input.xm, sm = input.sm, md = input.md, lg = input.lg, xl = input.xl, xxl = input.xxl;
-    if (exports.screenWidth <= 399 && xm)
-        return xm * responsiveWidth;
+    var xs = input.xs, sm = input.sm, md = input.md, lg = input.lg, xl = input.xl, xxl = input.xxl;
+    if (exports.screenWidth <= 399 && xs)
+        return xs * responsiveWidth;
     if (exports.screenWidth >= 400 && exports.screenWidth <= 599 && sm)
         return sm * responsiveWidth;
     if (exports.screenWidth >= 600 && exports.screenWidth <= 767 && md)

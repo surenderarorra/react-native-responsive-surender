@@ -38,14 +38,14 @@ const App = ()= > {
 
 # Get the Multiple Sizes if any not getting fit
 
-Using different size properties will not effect the device that are below 600 screen width, choose any one that is fit according to you.
+Using different size you need to pass object.
 
 ```js
 import {size} from 'react-native-responsive-surender';
 
 const App = ()= > {
   return (
-    <View style={size({xm:30 sm:30, md:30, lg:30, xl:30, xxl:30})}>
+    <View style={size({xs:30 sm:30, md:30, lg:30, xl:30, xxl:30})}>
       <Text>Hello World!</Text>
     </View>
   );
@@ -54,7 +54,7 @@ const App = ()= > {
 
 ```js
 
-1. xm is for screen that is smaller than 399.
+1. xs is for screen that is smaller than 399.
 2. sm is for screen that is between 400 to 599.
 3. md is for screen that is between 600 to 767.
 4. lg is for screen that is between 768 to 1007.

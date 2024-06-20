@@ -6,7 +6,7 @@ export const screenHeight = Dimensions.get("window").height;
 const responsiveWidth = screenWidth * 0.0025;
 
 interface BreakPoint {
-  xm?: number;
+  xs?: number;
   sm?: number;
   md?: number;
   lg?: number;
@@ -21,9 +21,9 @@ export const size = (input: SizeInput) => {
     return input * responsiveWidth;
   }
 
-  const { xm, sm, md, lg, xl, xxl } = input;
+  const { xs, sm, md, lg, xl, xxl } = input;
 
-  if (screenWidth <= 399 && xm) return xm * responsiveWidth;
+  if (screenWidth <= 399 && xs) return xs * responsiveWidth;
   if (screenWidth >= 400 && screenWidth <= 599 && sm)
     return sm * responsiveWidth;
   if (screenWidth >= 600 && screenWidth <= 767 && md)

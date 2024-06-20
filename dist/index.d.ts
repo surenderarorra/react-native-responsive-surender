@@ -1,7 +1,7 @@
 export declare const screenWidth: number;
 export declare const screenHeight: number;
 interface BreakPoint {
-    xm?: number;
+    xs?: number;
     sm?: number;
     md?: number;
     lg?: number;
