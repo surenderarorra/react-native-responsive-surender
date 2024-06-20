@@ -2,13 +2,13 @@
 An npm package for responsive your react native app
 
 # Install this Package
-```
+```js
 npm i react-native-responsive-surender
 ```
 
 It will automatically make Responsive fontSize, height, width according to devcice width
 
-```
+```js
 import {size} from 'react-native-responsive-surender';
 
 const App = ()= > {
@@ -22,9 +22,8 @@ const App = ()= > {
 
 Get the Device Width and Height Using Below
 
-```
+```js
 import {screenWidth, screenHeight} from 'react-native-responsive-surender';
-
 
 const App = ()= > {
   return (
