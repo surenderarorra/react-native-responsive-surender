@@ -1,7 +1,12 @@
 export declare const screenWidth: number;
 export declare const screenHeight: number;
-export declare const size: (size: number) => number;
-export declare const size_xl: (size: number) => number;
-export declare const size_lg: (size: number) => number;
-export declare const size_md: (size: number) => number;
-export declare const size_sm: (size: number) => number;
+interface BreakPoint {
+    sm?: number;
+    md?: number;
+    lg?: number;
+    xl?: number;
+    xxl?: number;
+}
+type SizeInput = number | BreakPoint;
+export declare const size: (input: SizeInput) => number;
+export {};

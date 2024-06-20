@@ -1,21 +1,36 @@
-import {Dimensions} from 'react-native';
+import { Dimensions } from "react-native";
 
-export const screenWidth = Math.round(Dimensions.get('window').width);
-export const screenHeight = Math.round(Dimensions.get('window').height);
+export const screenWidth = Dimensions.get("window").width;
+export const screenHeight = Dimensions.get("window").height;
 
-const responsiveWidth = Math.round(screenWidth * 0.0025);
-const responsiveHeight = Math.round(screenHeight * 0.00125);
+const responsiveWidth = screenWidth * 0.0025;
 
-export const size = (size: number) => size * responsiveWidth;
+interface BreakPoint {
+  sm?: number;
+  md?: number;
+  lg?: number;
+  xl?: number;
+  xxl?: number;
+}
 
-export const size_xl = (size: number) =>
-  screenWidth > 600 ? (size / 1.25) * responsiveWidth : size * responsiveWidth;
+type SizeInput = number | BreakPoint;
 
-export const size_lg = (size: number) =>
-  screenWidth > 600 ? (size / 1.5) * responsiveWidth : size * responsiveWidth;
+export const size = (input: SizeInput) => {
+  if (typeof input === "number") {
+    return input * responsiveWidth;
+  }
 
-export const size_md = (size: number) =>
-  screenWidth > 600 ? (size / 1.75) * responsiveWidth : size * responsiveWidth;
+  const { sm, md, lg, xl, xxl } = input;
 
-export const size_sm = (size: number) =>
-  screenWidth > 600 ? (size / 2) * responsiveWidth : size * responsiveWidth;
+  if (screenWidth <= 399 && sm) return sm * responsiveWidth;
+  if (screenWidth >= 400 && screenWidth <= 599 && md)
+    return md * responsiveWidth;
+  if (screenWidth >= 600 && screenWidth <= 767 && lg)
+    return lg * responsiveWidth;
+  if (screenWidth >= 768 && screenWidth <= 1007 && xl)
+    return xl * responsiveWidth;
+  if (screenWidth >= 1008 && screenWidth <= 1279 && xxl)
+    return xxl * responsiveWidth;
+
+  return 0;
+};
