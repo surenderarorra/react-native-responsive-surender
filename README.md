@@ -6,7 +6,7 @@ An npm package for responsive your react native app
 npm i react-native-responsive-surender
 ```
 
-It will automatically make Responsive fontSize, heigh, width according to devcice width
+It will automatically make Responsive fontSize, height, width according to devcice width
 
 ```javascript
 import {size} from 'react-native-responsive-surender';
