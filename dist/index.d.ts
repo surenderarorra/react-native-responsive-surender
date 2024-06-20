@@ -9,5 +9,5 @@ interface BreakPoint {
     xxl?: number;
 }
 type SizeInput = number | BreakPoint;
-export declare const size: (input: SizeInput) => number | undefined;
+export declare const size: (input: SizeInput) => number;
 export {};
