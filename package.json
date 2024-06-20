@@ -1,0 +1,22 @@
+{
+  "name": "react-native-responsive-surender",
+  "version": "1.0.0",
+  "description": "An npm package for responsive your react native app",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surenderarorra/react-native-responsive-surender.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Surender Kumar",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/surenderarorra/react-native-responsive-surender/issues"
+  },
+  "homepage": "https://github.com/surenderarorra/react-native-responsive-surender#readme"
+}
