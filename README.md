@@ -37,7 +37,8 @@ const App = ()= > {
 # Get the Multiple Sizes if any not getting fit
 Using different size properties will not effect the device that are below 600 screen width
 if you making an app for mobile device use only size otherwise choose any one that is fit according to you.
-```
+
+```js
 import {size, size_sm, size_md, size_lg, size_xl} from 'react-native-responsive-surender';
 
 const App = ()= > {
