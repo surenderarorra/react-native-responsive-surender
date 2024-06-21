@@ -11,11 +11,11 @@ npm i react-native-responsive-surender
 It will automatically make Responsive fontSize, height, width according to device width
 
 ```js
-import {size} from 'react-native-responsive-surender';
+import Size from 'react-native-responsive-surender';
 
 const App = ()= > {
   return (
-    <View style={{fontSize: size(16)}}>
+    <View style={{fontSize: Size(16)}}>
       <Text>Hello World!</Text>
     </View>
   );
@@ -38,15 +38,15 @@ const App = ()= > {
 
 # Get the Multiple Sizes if any not getting fit
 
-Using different size you need to pass object.
+Using different size you need to use Size(lg, md, sm).
 
 ```js
-import {size} from 'react-native-responsive-surender';
+import Size from 'react-native-responsive-surender';
 
 const App = ()= > {
   return (
-    <View style={size({xs:30 sm:30, md:30, lg:30, xl:30, xxl:30})}>
-      <Text>Hello World!</Text>
+    <View>
+      <Text style={{fontSiz: size(40,30,20)}}>Hello World!</Text>
     </View>
   );
 };
@@ -54,11 +54,38 @@ const App = ()= > {
 
 ```js
 
-1. xs is for screen that is smaller than 399.
-2. sm is for screen that is between 400 to 599.
-3. md is for screen that is between 600 to 767.
-4. lg is for screen that is between 768 to 1007.
-5. xl is for screen that is between 1008 to 1279
-6. xxl is for screen that is greater than 1280.
+ * 1. lg is for screen that is between 600 to 767.
+ * 2. md is for screen that is between 400 to 599.
+ * 3. sm is for screen that is smaller than 399.
+
+```
+
+#use percentages for for all screen Size
+
+```js
+import Size from 'react-native-responsive-surender';
+
+const App = ()= > {
+  return (
+    <View style={{height: Size("10%")}}>
+      <Text>Hello World!</Text>
+    </View>
+  );
+};
+
+```
+
+#use percentages for specific screen Size
+
+```js
+import Size from 'react-native-responsive-surender';
+
+const App = ()= > {
+  return (
+    <View style={{height: Size("10%", "15%", "20%")}}>
+      <Text>Hello World!</Text>
+    </View>
+  );
+};
 
 ```
