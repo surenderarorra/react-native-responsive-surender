@@ -1,6 +1,6 @@
 {
   "name": "react-native-responsive-surender",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "An npm package for responsive your react native app",
   "main": "dist/index.js",
   "types": "dist/index.ts",
